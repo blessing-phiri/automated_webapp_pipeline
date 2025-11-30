@@ -31,7 +31,7 @@ variable "key_name" {
 variable "project_name" {
   description = "Project name"
   type        = string
-  default     = "devops-resume"
+  default     = "automated_pipeline"
 }
 
 variable "environment" {
