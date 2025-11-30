@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriacres - Innovative Agricultural Solutions</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Price Ticker -->
+    <div class="price-ticker">
+        <div class="ticker-container">
+            <div class="ticker-title">Today's Prices:</div>
+            <div class="ticker-content" id="priceData">
+                <!-- Prices will be loaded via API -->
+                Loading agricultural prices...
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <img src="images/logo.svg" class="logo"> 
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item mega-dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Home Sections</h3>
+                            <a href="#hero">Hero Section</a>
+                            <a href="#clients">Our Clients</a>
+                            <a href="#marketplace">Marketplace</a>
+                            <a href="#contact">Quick Contact</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>About Agriacres</h3>
+                            <p>Learn about our mission, vision, and the team behind our agricultural innovations.</p>
+                            <a href="about.html#mission">Our Mission</a>
+                            <a href="about.html#team">Our Team</a>
+                            <a href="about.html#history">Company History</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Achievements</h3>
+                            <p>Discover our milestones and industry recognition.</p>
+                            <a href="about.html#awards">Awards</a>
+                            <a href="about.html#partners">Strategic Partners</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Our Services</h3>
+                            <p>Comprehensive agricultural solutions tailored to your needs.</p>
+                            <a href="services.html#consulting">Agricultural Consulting</a>
+                            <a href="services.html#equipment">Equipment Rental</a>
+                            <a href="services.html#training">Farmer Training</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Specialized Services</h3>
+                            <a href="services.html#irrigation">Irrigation Solutions</a>
+                            <a href="services.html#storage">Crop Storage</a>
+                            <a href="services.html#processing">Food Processing</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="products.html" class="nav-link">Products</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Agricultural Products</h3>
+                            <p>High-quality inputs for optimal yields.</p>
+                            <a href="products.html#seeds">Seeds & Seedlings</a>
+                            <a href="products.html#fertilizers">Fertilizers</a>
+                            <a href="products.html#pesticides">Pesticides</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Equipment</h3>
+                            <a href="products.html#tools">Hand Tools</a>
+                            <a href="products.html#machinery">Farm Machinery</a>
+                            <a href="products.html#irrigation">Irrigation Systems</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Innovative Agricultural Solutions</h1>
+                <p>Connecting farmers with technology, resources, and markets to transform agriculture in Zimbabwe</p>
+                <div class="hero-buttons">
+                    <a href="marketplace.html" class="btn-primary">Explore Marketplace</a>
+                    <a href="services.html" class="btn-secondary">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-illustration.svg" alt="Agricultural Illustration">
+            </div>
+        </div>
+        <div class="gradient-hover-effect"></div>
+    </section>
+
+    <!-- Clients Carousel -->
+    <section class="clients-section" id="clients">
+        <div class="container">
+            <h2 class="section-title">Trusted By</h2>
+            <div class="clients-carousel">
+                <div class="client-slide">
+                    <img src="images/client1.png" alt="Client 1">
+                </div>
+                <div class="client-slide">
+                    <img src="images/client2.png" alt="Client 2">
+                </div>
+                <div class="client-slide">
+                    <img src="images/client3.png" alt="Client 3">
+                </div>
+                <div class="client-slide">
+                    <img src="images/client4.png" alt="Client 4">
+                </div>
+                <div class="client-slide">
+                    <img src="images/client5.png" alt="Client 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Intro -->
+    <section class="marketplace-intro" id="marketplace">
+        <div class="container">
+            <div class="marketplace-content">
+                <h2 class="section-title">Direct Farm-to-Consumer Marketplace</h2>
+                <p>Our innovative platform connects farmers directly with consumers, eliminating middlemen and ensuring fair prices for both producers and buyers.</p>
+                
+                <div class="marketplace-features">
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Direct Transactions</h3>
+                        <p>Farmers sell directly to consumers with transparent pricing.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Fair Pricing</h3>
+                        <p>Real-time market data ensures competitive yet fair prices.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h3>Logistics Support</h3>
+                        <p>We handle transportation and delivery coordination.</p>
+                    </div>
+                </div>
+                
+                <div class="marketplace-cta">
+                    <h3>Join Our Growing Community</h3>
+                    <form class="contact-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">Get Started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Quick Contact -->
+<section class="quick-contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Have Questions?</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> +263 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@agriacres.co.zw</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Farm Lane, Harare, Zimbabwe</p>
+                
+                <div class="business-hours">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Agriacres</h3>
+                    <p>Innovating agriculture for a sustainable future in Zimbabwe and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                        <li><a href="services.html#equipment">Equipment Rental</a></li>
+                        <li><a href="services.html#training">Training</a></li>
+                        <li><a href="services.html#irrigation">Irrigation</a></li>
+                        <li><a href="services.html#storage">Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for agricultural insights and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Agriacres. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/price-api.js"></script>
+    <script src="js/carousels.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

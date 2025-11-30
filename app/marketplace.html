@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriacres Marketplace - Direct Farm-to-Consumer</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/marketplace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Price Ticker -->
+    <div class="price-ticker">
+        <div class="ticker-container">
+            <div class="ticker-title">Live Market Prices:</div>
+            <div class="ticker-content" id="priceData">
+                Loading agricultural prices...
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="container">
+            <img src="images/logo.svg" class="logo"> 
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item mega-dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Home Sections</h3>
+                            <a href="#hero">Hero Section</a>
+                            <a href="#clients">Our Clients</a>
+                            <a href="#marketplace">Marketplace</a>
+                            <a href="#contact">Quick Contact</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>About Agriacres</h3>
+                            <p>Learn about our mission, vision, and the team behind our agricultural innovations.</p>
+                            <a href="about.html#mission">Our Mission</a>
+                            <a href="about.html#team">Our Team</a>
+                            <a href="about.html#history">Company History</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Achievements</h3>
+                            <p>Discover our milestones and industry recognition.</p>
+                            <a href="about.html#awards">Awards</a>
+                            <a href="about.html#partners">Strategic Partners</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Our Services</h3>
+                            <p>Comprehensive agricultural solutions tailored to your needs.</p>
+                            <a href="services.html#consulting">Agricultural Consulting</a>
+                            <a href="services.html#equipment">Equipment Rental</a>
+                            <a href="services.html#training">Farmer Training</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Specialized Services</h3>
+                            <a href="services.html#irrigation">Irrigation Solutions</a>
+                            <a href="services.html#storage">Crop Storage</a>
+                            <a href="services.html#processing">Food Processing</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="products.html" class="nav-link">Products</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Agricultural Products</h3>
+                            <p>High-quality inputs for optimal yields.</p>
+                            <a href="products.html#seeds">Seeds & Seedlings</a>
+                            <a href="products.html#fertilizers">Fertilizers</a>
+                            <a href="products.html#pesticides">Pesticides</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Equipment</h3>
+                            <a href="products.html#tools">Hand Tools</a>
+                            <a href="products.html#machinery">Farm Machinery</a>
+                            <a href="products.html#irrigation">Irrigation Systems</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Marketplace Hero -->
+    <section class="marketplace-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Agriacres Marketplace</h1>
+                <p>Connecting farmers directly with consumers for fair prices and fresh produce</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for produce, farmers, or locations...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="advanced-filter-toggle">
+                        <i class="fas fa-sliders-h"></i> Filters
+                    </div>
+                </div>
+                <div class="advanced-filters">
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select>
+                            <option>All Categories</option>
+                            <option>Grains & Cereals</option>
+                            <option>Fruits</option>
+                            <option>Vegetables</option>
+                            <option>Livestock</option>
+                            <option>Dairy</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <select>
+                            <option>All Zimbabwe</option>
+                            <option>Harare</option>
+                            <option>Bulawayo</option>
+                            <option>Mutare</option>
+                            <option>Gweru</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Price Range</label>
+                        <div class="price-range">
+                            <input type="range" min="0" max="1000" value="500" class="slider" id="priceRange">
+                            <span id="priceValue">Up to $500</span>
+                        </div>
+                    </div>
+                    <button class="apply-filters">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+        <div class="marketplace-pattern"></div>
+    </section>
+
+    <!-- Marketplace Features -->
+    <section class="marketplace-features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Fair Pricing</h3>
+                    <p>Farmers set their own prices and keep more profits by eliminating middlemen</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Direct Delivery</h3>
+                    <p>Choose between farm pickup or arranged delivery to your location</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Verified Farmers</h3>
+                    <p>All producers are vetted and certified by Agriacres</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments-dollar"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>Escrow system ensures payment only released after delivery confirmation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Listings -->
+    <section class="product-listings">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fresh Produce Available</h2>
+                <div class="view-toggle">
+                    <button class="view-option active" data-view="grid">
+                        <i class="fas fa-th"></i> Grid
+                    </button>
+                    <button class="view-option" data-view="list">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                    <button class="view-option" data-view="map">
+                        <i class="fas fa-map-marked-alt"></i> Map
+                    </button>
+                </div>
+            </div>
+
+            <div class="listings-container grid-view">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge organic">ORGANIC</div>
+                    <div class="product-image">
+                        <img src="images/maize.jpg" alt="Maize">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium White Maize</h3>
+                        <div class="farmer-info">
+                            <img src="images/farmer1.jpg" alt="Farmer" class="farmer-avatar">
+                            <span>Chido Moyo Farm, Mashonaland East</span>
+                        </div>
+                        <div class="product-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24)</span>
+                            </div>
+                            <div class="stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price">
+                                <span class="current-price">$120 / 50kg bag</span>
+                                <span class="original-price">$150</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge local">LOCAL</div>
+                    <div class="product-image">
+                        <img src="images/tomatoes.jpg" alt="Tomatoes">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Roma Tomatoes</h3>
+                        <div class="farmer-info">
+                            <img src="images/farmer2.jpg" alt="Farmer" class="farmer-avatar">
+                            <span>Mhofu Farm, Mashonaland West</span>
+                        </div>
+                        <div class="product-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(18)</span>
+                            </div>
+                            <div class="stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price">
+                                <span class="current-price">$2.50 / kg</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge premium">PREMIUM</div>
+                    <div class="product-image">
+                        <img src="images/beef.jpg" alt="Beef">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Grass-Fed Beef</h3>
+                        <div class="farmer-info">
+                            <img src="images/farmer3.jpg" alt="Farmer" class="farmer-avatar">
+                            <span>Matopos Ranch, Matabeleland</span>
+                        </div>
+                        <div class="product-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(42)</span>
+                            </div>
+                            <div class="stock low">
+                                <i class="fas fa-exclamation-circle"></i> Low Stock
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price">
+                                <span class="current-price">$8.99 / kg</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-badge organic">ORGANIC</div>
+                    <div class="product-image">
+                        <img src="images/eggs.jpg" alt="Eggs">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Free-Range Eggs</h3>
+                        <div class="farmer-info">
+                            <img src="images/farmer4.jpg" alt="Farmer" class="farmer-avatar">
+                            <span>Chikanga Poultry, Manicaland</span>
+                        </div>
+                        <div class="product-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(31)</span>
+                            </div>
+                            <div class="stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price">
+                                <span class="current-price">$3.20 / dozen</span>
+                                <span class="original-price">$3.50</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-badge new">NEW</div>
+                    <div class="product-image">
+                        <img src="images/honey.jpg" alt="Honey">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Raw Wild Honey</h3>
+                        <div class="farmer-info">
+                            <img src="images/farmer5.jpg" alt="Farmer" class="farmer-avatar">
+                            <span>Nyanga Apiaries, Manicaland</span>
+                        </div>
+                        <div class="product-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(12)</span>
+                            </div>
+                            <div class="stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price">
+                                <span class="current-price">$6.50 / 500g</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-badge local">LOCAL</div>
+                    <div class="product-image">
+                        <img src="images/milk.jpg" alt="Milk">
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Whole Milk</h3>
+                        <div class="farmer-info">
+                            <img src="images/farmer6.jpg" alt="Farmer" class="farmer-avatar">
+                            <span>Gushungo Dairy, Mashonaland Central</span>
+                        </div>
+                        <div class="product-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(37)</span>
+                            </div>
+                            <div class="stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price">
+                                <span class="current-price">$1.80 / liter</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmer Spotlight -->
+    <section class="farmer-spotlight">
+        <div class="container">
+            <h2>Featured Farmers</h2>
+            <div class="spotlight-carousel">
+                <!-- Farmer 1 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="images/featured-farmer1.jpg" alt="Featured Farmer">
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="farmer-details">
+                        <h3>Chido Moyo</h3>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i> Marondera, Mashonaland East
+                        </p>
+                        <div class="specialties">
+                            <span>Maize</span>
+                            <span>Wheat</span>
+                            <span>Soybeans</span>
+                        </div>
+                        <div class="farmer-stats">
+                            <div class="stat">
+                                <div class="value">4.8</div>
+                                <div class="label">Rating</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">127</div>
+                                <div class="label">Sales</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">3</div>
+                                <div class="label">Years</div>
+                            </div>
+                        </div>
+                        <button class="view-farm">
+                            View Farm <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Farmer 2 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="images/featured-farmer2.jpg" alt="Featured Farmer">
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="farmer-details">
+                        <h3>Tendai Banda</h3>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i> Norton, Mashonaland West
+                        </p>
+                        <div class="specialties">
+                            <span>Tomatoes</span>
+                            <span>Onions</span>
+                            <span>Peppers</span>
+                        </div>
+                        <div class="farmer-stats">
+                            <div class="stat">
+                                <div class="value">4.6</div>
+                                <div class="label">Rating</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">89</div>
+                                <div class="label">Sales</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">2</div>
+                                <div class="label">Years</div>
+                            </div>
+                        </div>
+                        <button class="view-farm">
+                            View Farm <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Farmer 3 -->
+                <div class="farmer-card">
+                    <div class="farmer-image">
+                        <img src="images/featured-farmer3.jpg" alt="Featured Farmer">
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="farmer-details">
+                        <h3>Farai Muzenda</h3>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i> Matopos, Matabeleland
+                        </p>
+                        <div class="specialties">
+                            <span>Beef</span>
+                            <span>Goat Meat</span>
+                            <span>Leather</span>
+                        </div>
+                        <div class="farmer-stats">
+                            <div class="stat">
+                                <div class="value">4.9</div>
+                                <div class="label">Rating</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">215</div>
+                                <div class="label">Sales</div>
+                            </div>
+                            <div class="stat">
+                                <div class="value">5</div>
+                                <div class="label">Years</div>
+                            </div>
+                        </div>
+                        <button class="view-farm">
+                            View Farm <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How Our Marketplace Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Browse Products</h3>
+                        <p>Explore fresh produce directly from local farms across Zimbabwe</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Place Your Order</h3>
+                        <p>Select your items and choose delivery or pickup options</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Secure Payment</h3>
+                        <p>Pay safely through our escrow system that protects both buyers and farmers</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Receive Fresh Goods</h3>
+                        <p>Get farm-fresh products delivered or pick them up from the farm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Start Shopping</a>
+                <a href="#" class="btn-secondary">Become a Seller</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Home) -->
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Agriacres</h3>
+                    <p>Innovating agriculture for a sustainable future in Zimbabwe and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                        <li><a href="services.html#equipment">Equipment Rental</a></li>
+                        <li><a href="services.html#training">Training</a></li>
+                        <li><a href="services.html#irrigation">Irrigation</a></li>
+                        <li><a href="services.html#storage">Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for agricultural insights and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Agriacres. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-product-view">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/price-api.js"></script>
+    <script src="js/marketplace.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

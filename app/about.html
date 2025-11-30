@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Agriacres - Our Agricultural Vision</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Price Ticker (Same as Home) -->
+    <div class="price-ticker">
+        <div class="ticker-container">
+            <div class="ticker-title">Today's Prices:</div>
+            <div class="ticker-content" id="priceData">
+                Loading agricultural prices...
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (Same as Home) -->
+   <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Agriacres</a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item mega-dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Home Sections</h3>
+                            <a href="#hero">Hero Section</a>
+                            <a href="#clients">Our Clients</a>
+                            <a href="#marketplace">Marketplace</a>
+                            <a href="#contact">Quick Contact</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>About Agriacres</h3>
+                            <p>Learn about our mission, vision, and the team behind our agricultural innovations.</p>
+                            <a href="about.html#mission">Our Mission</a>
+                            <a href="about.html#team">Our Team</a>
+                            <a href="about.html#history">Company History</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Achievements</h3>
+                            <p>Discover our milestones and industry recognition.</p>
+                            <a href="about.html#awards">Awards</a>
+                            <a href="about.html#partners">Strategic Partners</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Our Services</h3>
+                            <p>Comprehensive agricultural solutions tailored to your needs.</p>
+                            <a href="services.html#consulting">Agricultural Consulting</a>
+                            <a href="services.html#equipment">Equipment Rental</a>
+                            <a href="services.html#training">Farmer Training</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Specialized Services</h3>
+                            <a href="services.html#irrigation">Irrigation Solutions</a>
+                            <a href="services.html#storage">Crop Storage</a>
+                            <a href="services.html#processing">Food Processing</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="products.html" class="nav-link">Products</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Agricultural Products</h3>
+                            <p>High-quality inputs for optimal yields.</p>
+                            <a href="products.html#seeds">Seeds & Seedlings</a>
+                            <a href="products.html#fertilizers">Fertilizers</a>
+                            <a href="products.html#pesticides">Pesticides</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Equipment</h3>
+                            <a href="products.html#tools">Hand Tools</a>
+                            <a href="products.html#machinery">Farm Machinery</a>
+                            <a href="products.html#irrigation">Irrigation Systems</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animated Hero Section -->
+    <section class="about-hero">
+        <div class="particles" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content animate-slideInLeft">
+                <h1 class="animated-text">Cultivating Zimbabwe's Agricultural Future</h1>
+                <p class="subtitle">Since 2010, we've been transforming agriculture through innovation, technology, and sustainable practices</p>
+                <div class="stats-grid">
+                    <div class="stat-item animate-popIn delay-1">
+                        <div class="stat-number" data-count="13">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item animate-popIn delay-2">
+                        <div class="stat-number" data-count="2500">0</div>
+                        <div class="stat-label">Farmers Empowered</div>
+                    </div>
+                    <div class="stat-item animate-popIn delay-3">
+                        <div class="stat-number" data-count="45">0</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image animate-slideInRight">
+                <div class="image-container">
+                    <img src="images/about-hero.jpg" alt="Agriacres Team" class="main-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fadeIn">Our Story</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-slideInUp delay-1">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h3>Founded in Harare</h3>
+                            <p>Started as a small agricultural consultancy with just 3 team members focused on improving local farming techniques.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slideInUp delay-2">
+                        <div class="timeline-year">2014</div>
+                        <div class="timeline-content">
+                            <h3>First Expansion</h3>
+                            <p>Opened our first regional office in Bulawayo and launched farmer training programs across Matabeleland.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slideInUp delay-3">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h3>Technology Integration</h3>
+                            <p>Developed our first digital platform connecting farmers with markets and launched mobile advisory services.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-slideInUp delay-4">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>National Recognition</h3>
+                            <p>Awarded "Agricultural Innovator of the Year" by Zimbabwe Agricultural Society for our marketplace platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card mission animate-slideInLeft">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize Zimbabwean agriculture through innovative solutions that increase productivity, sustainability, and profitability for farmers at all scales.</p>
+                </div>
+                <div class="mv-card vision animate-slideInRight">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>A Zimbabwe where agriculture drives economic growth, ensures food security, and provides dignified livelihoods through modern, sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title animate-fadeIn">Meet Our Leadership</h2>
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member animate-popIn delay-1">
+                    <div class="member-image">
+                        <img src="images/team1.jpg" alt="Tendai Moyo">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Tendai Moyo</h3>
+                        <p class="position">Founder & CEO</p>
+                        <p class="bio">Agricultural economist with 20+ years experience in sub-Saharan farming systems.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member animate-popIn delay-2">
+                    <div class="member-image">
+                        <img src="images/team2.jpg" alt="Rumbidzai Chikomo">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Rumbidzai Chikomo</h3>
+                        <p class="position">CTO</p>
+                        <p class="bio">Tech innovator specializing in agricultural digital solutions for emerging markets.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member animate-popIn delay-3">
+                    <div class="member-image">
+                        <img src="images/team3.jpg" alt="Farai Muzenda">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Farai Muzenda</h3>
+                        <p class="position">Head of Operations</p>
+                        <p class="bio">Supply chain expert focused on agricultural value chain optimization.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-member animate-popIn delay-4">
+                    <div class="member-image">
+                        <img src="images/team4.jpg" alt="Nyasha Ndlovu">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Nyasha Ndlovu</h3>
+                        <p class="position">Director of Farmer Relations</p>
+                        <p class="bio">Former commercial farmer with deep connections to Zimbabwe's farming communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title animate-fadeIn">Our Core Values</h2>
+            <div class="values-carousel">
+                <div class="value-card animate-slideInUp delay-1">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We maintain the highest ethical standards in all our dealings with farmers, partners, and stakeholders.</p>
+                </div>
+                <div class="value-card animate-slideInUp delay-2">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously seek and implement creative solutions to agricultural challenges.</p>
+                </div>
+                <div class="value-card animate-slideInUp delay-3">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    <div class="pulse-effect"></div>
+                    <div class="pulse-effect delay-1"></div>
+                    <div class="pulse-effect delay-2"></div>
+                    </div>
+                    <h3>Community</h3>
+                    <p>We believe in the power of collective action and shared knowledge to transform agriculture.</p>
+                </div>
+                <div class="value-card animate-slideInUp delay-4">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>We promote practices that ensure long-term environmental health and economic viability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-content animate-fadeIn">
+                <h2>Ready to Grow With Us?</h2>
+                <p>Whether you're a farmer looking to improve your yields or a consumer wanting fresh, local produce, we have solutions for you.</p>
+                <div class="cta-buttons">
+                    <a href="marketplace.html" class="btn-primary animate-popIn delay-1">
+                        <i class="fas fa-store"></i> Visit Marketplace
+                    </a>
+                    <a href="contact.html" class="btn-secondary animate-popIn delay-2">
+                        <i class="fas fa-envelope"></i> Contact Our Team
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-background"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Agriacres</h3>
+                    <p>Innovating agriculture for a sustainable future in Zimbabwe and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                        <li><a href="services.html#equipment">Equipment Rental</a></li>
+                        <li><a href="services.html#training">Training</a></li>
+                        <li><a href="services.html#irrigation">Irrigation</a></li>
+                        <li><a href="services.html#storage">Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for agricultural insights and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Agriacres. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/price-api.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/about-animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Seller | Agriacres Marketplace</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/become-seller.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (Same as Home) -->
+ <nav class="navbar">
+        <div class="container">
+            <img src="images/logo.svg" class="logo"> 
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item mega-dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Home Sections</h3>
+                            <a href="#hero">Hero Section</a>
+                            <a href="#clients">Our Clients</a>
+                            <a href="#marketplace">Marketplace</a>
+                            <a href="#contact">Quick Contact</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>About Agriacres</h3>
+                            <p>Learn about our mission, vision, and the team behind our agricultural innovations.</p>
+                            <a href="about.html#mission">Our Mission</a>
+                            <a href="about.html#team">Our Team</a>
+                            <a href="about.html#history">Company History</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Achievements</h3>
+                            <p>Discover our milestones and industry recognition.</p>
+                            <a href="about.html#awards">Awards</a>
+                            <a href="about.html#partners">Strategic Partners</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Our Services</h3>
+                            <p>Comprehensive agricultural solutions tailored to your needs.</p>
+                            <a href="services.html#consulting">Agricultural Consulting</a>
+                            <a href="services.html#equipment">Equipment Rental</a>
+                            <a href="services.html#training">Farmer Training</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Specialized Services</h3>
+                            <a href="services.html#irrigation">Irrigation Solutions</a>
+                            <a href="services.html#storage">Crop Storage</a>
+                            <a href="services.html#processing">Food Processing</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="products.html" class="nav-link">Products</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Agricultural Products</h3>
+                            <p>High-quality inputs for optimal yields.</p>
+                            <a href="products.html#seeds">Seeds & Seedlings</a>
+                            <a href="products.html#fertilizers">Fertilizers</a>
+                            <a href="products.html#pesticides">Pesticides</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Equipment</h3>
+                            <a href="products.html#tools">Hand Tools</a>
+                            <a href="products.html#machinery">Farm Machinery</a>
+                            <a href="products.html#irrigation">Irrigation Systems</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seller Hero Section -->
+    <section class="seller-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sell Your Agricultural Products on Agriacres</h1>
+                <p>Join our marketplace and connect directly with thousands of buyers across Zimbabwe</p>
+                <div class="cta-buttons">
+                    <a href="#seller-form" class="btn-primary">Get Started Now</a>
+                    <a href="#benefits" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/seller-hero.jpg" alt="Happy Farmer">
+                <div class="floating-badge">
+                    <div class="badge-content">
+                        <span class="count">1,250+</span>
+                        <span class="label">Active Farmers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seller Benefits -->
+    <section class="seller-benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Sell With Agriacres?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Large Customer Base</h3>
+                    <p>Access thousands of verified buyers looking for fresh agricultural products</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Better Prices</h3>
+                    <p>Eliminate middlemen and get fair prices for your products</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Logistics Support</h3>
+                    <p>We help arrange transportation for your products to buyers</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Insights</h3>
+                    <p>Get real-time data on pricing trends and demand patterns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="seller-how-it-works">
+        <div class="container">
+            <h2 class="section-title">How Selling Works</h2>
+            <div class="steps-timeline">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Seller Profile</h3>
+                        <p>Complete our simple registration process and get verified</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>List Your Products</h3>
+                        <p>Add your products with details, photos, and pricing</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Receive Orders</h3>
+                        <p>Get notified when buyers purchase your products</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Get Paid</h3>
+                        <p>Receive payments directly to your account after delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seller Registration Form -->
+    <section class="seller-registration" id="seller-form">
+        <div class="container">
+            <div class="registration-container">
+                <div class="registration-form">
+                    <h2>Become a Seller</h2>
+                    <p>Fill out the form below to start selling on Agriacres</p>
+                    
+                    <form id="sellerApplicationForm">
+                        <div class="form-step active" data-step="1">
+                            <h3>Basic Information</h3>
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Farm Location</label>
+                                <select id="location" required>
+                                    <option value="">Select Province</option>
+                                    <option value="harare">Harare</option>
+                                    <option value="bulawayo">Bulawayo</option>
+                                    <option value="manicaland">Manicaland</option>
+                                    <option value="mashonaland_east">Mashonaland East</option>
+                                    <option value="mashonaland_west">Mashonaland West</option>
+                                    <option value="midlands">Midlands</option>
+                                    <option value="masvingo">Masvingo</option>
+                                    <option value="matabeleland_north">Matabeleland North</option>
+                                    <option value="matabeleland_south">Matabeleland South</option>
+                                </select>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" data-step="2">
+                            <h3>Farm Details</h3>
+                            <div class="form-group">
+                                <label for="farmName">Farm Name</label>
+                                <input type="text" id="farmName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="farmSize">Farm Size (hectares)</label>
+                                <input type="number" id="farmSize" min="0" step="0.1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="farmingType">Primary Farming Activity</label>
+                                <select id="farmingType" required>
+                                    <option value="">Select Activity</option>
+                                    <option value="crop">Crop Production</option>
+                                    <option value="livestock">Livestock</option>
+                                    <option value="poultry">Poultry</option>
+                                    <option value="dairy">Dairy</option>
+                                    <option value="mixed">Mixed Farming</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="products">Main Products (select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="products" value="maize"> Maize</label>
+                                    <label><input type="checkbox" name="products" value="wheat"> Wheat</label>
+                                    <label><input type="checkbox" name="products" value="soybeans"> Soybeans</label>
+                                    <label><input type="checkbox" name="products" value="tomatoes"> Tomatoes</label>
+                                    <label><input type="checkbox" name="products" value="vegetables"> Vegetables</label>
+                                    <label><input type="checkbox" name="products" value="fruits"> Fruits</label>
+                                    <label><input type="checkbox" name="products" value="beef"> Beef</label>
+                                    <label><input type="checkbox" name="products" value="poultry"> Poultry</label>
+                                    <label><input type="checkbox" name="products" value="dairy"> Dairy Products</label>
+                                    <label><input type="checkbox" name="products" value="other"> Other</label>
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button type="button" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" data-step="3">
+                            <h3>Business Information</h3>
+                            <div class="form-group">
+                                <label for="businessType">Business Type</label>
+                                <select id="businessType" required>
+                                    <option value="">Select Business Type</option>
+                                    <option value="individual">Individual Farmer</option>
+                                    <option value="cooperative">Cooperative</option>
+                                    <option value="company">Registered Company</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="registrationNumberGroup">
+                                <label for="registrationNumber">Business Registration Number</label>
+                                <input type="text" id="registrationNumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="bankName">Bank Name</label>
+                                <input type="text" id="bankName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" id="accountNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="accountName">Account Holder Name</label>
+                                <input type="text" id="accountName" required>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button type="button" class="btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" data-step="4">
+                            <h3>Document Upload</h3>
+                            <div class="form-group">
+                                <label for="idDocument">ID Document (National ID/Passport)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="idDocument" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="idDocument" class="file-upload-label">
+                                        <i class="fas fa-upload"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                    <span class="file-name">No file chosen</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="proofOfResidence">Proof of Residence</label>
+                                <div class="file-upload">
+                                    <input type="file" id="proofOfResidence" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <label for="proofOfResidence" class="file-upload-label">
+                                        <i class="fas fa-upload"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                    <span class="file-name">No file chosen</span>
+                                </div>
+                            </div>
+                            <div class="form-group" id="businessDocumentsGroup">
+                                <label for="businessDocuments">Business Registration Documents</label>
+                                <div class="file-upload">
+                                    <input type="file" id="businessDocuments" accept=".pdf,.jpg,.jpeg,.png">
+                                    <label for="businessDocuments" class="file-upload-label">
+                                        <i class="fas fa-upload"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                    <span class="file-name">No file chosen</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="farmPhotos">Farm Photos (Optional but recommended)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="farmPhotos" accept=".jpg,.jpeg,.png" multiple>
+                                    <label for="farmPhotos" class="file-upload-label">
+                                        <i class="fas fa-upload"></i>
+                                        <span>Choose Files</span>
+                                    </label>
+                                    <span class="file-name">No files chosen</span>
+                                </div>
+                            </div>
+                            <div class="form-navigation">
+                                <button type="button" class="btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button type="submit" class="btn-submit">Submit Application</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="registration-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Seller Requirements</h3>
+                        <ul>
+                            <li>Must be a registered farmer or agricultural producer</li>
+                            <li>Valid government-issued ID</li>
+                            <li>Proof of residence or farm location</li>
+                            <li>Bank account for payments</li>
+                            <li>Quality products that meet our standards</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Seller Benefits</h3>
+                        <ul>
+                            <li>0% commission for first 3 months</li>
+                            <li>Only 5% transaction fee after</li>
+                            <li>Free product listing</li>
+                            <li>Marketing support</li>
+                            <li>Access to premium buyers</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Need Help?</h3>
+                        <p>Contact our seller support team:</p>
+                        <p><i class="fas fa-phone"></i> +263 123 456 789</p>
+                        <p><i class="fas fa-envelope"></i> sellers@agriacres.co.zw</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seller Dashboard Preview -->
+    <section class="dashboard-preview">
+        <div class="container">
+            <h2 class="section-title">Your Seller Dashboard</h2>
+            <div class="dashboard-tabs">
+                <button class="tab-btn active" data-tab="products">Products</button>
+                <button class="tab-btn" data-tab="orders">Orders</button>
+                <button class="tab-btn" data-tab="analytics">Analytics</button>
+                <button class="tab-btn" data-tab="payments">Payments</button>
+            </div>
+            
+            <div class="tab-content active" id="products-tab">
+                <div class="dashboard-header">
+                    <h3>Your Product Listings</h3>
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Add New Product
+                    </button>
+                </div>
+                
+                <div class="product-listings">
+                    <!-- Product 1 -->
+                    <div class="product-listing">
+                        <div class="product-image">
+                            <img src="images/maize.jpg" alt="Maize">
+                            <div class="product-status active">Active</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>Premium White Maize</h4>
+                            <div class="product-meta">
+                                <span class="price">$120 / 50kg bag</span>
+                                <span class="stock">12 in stock</span>
+                            </div>
+                            <div class="product-views">
+                                <i class="fas fa-eye"></i> 245 views this month
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn edit">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="action-btn stats">
+                                <i class="fas fa-chart-bar"></i> Stats
+                            </button>
+                            <button class="action-btn pause">
+                                <i class="fas fa-pause"></i> Pause
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-listing">
+                        <div class="product-image">
+                            <img src="images/tomatoes.jpg" alt="Tomatoes">
+                            <div class="product-status paused">Paused</div>
+                        </div>
+                        <div class="product-details">
+                            <h4>Fresh Roma Tomatoes</h4>
+                            <div class="product-meta">
+                                <span class="price">$2.50 / kg</span>
+                                <span class="stock">Out of stock</span>
+                            </div>
+                            <div class="product-views">
+                                <i class="fas fa-eye"></i> 189 views this month
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn edit">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="action-btn stats">
+                                <i class="fas fa-chart-bar"></i> Stats
+                            </button>
+                            <button class="action-btn activate">
+                                <i class="fas fa-play"></i> Activate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Add Product Button -->
+                    <div class="add-product-card">
+                        <button class="add-product-btn">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Add New Product</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="orders-tab">
+                <!-- Orders content would go here -->
+            </div>
+            
+            <div class="tab-content" id="analytics-tab">
+                <!-- Analytics content would go here -->
+            </div>
+            
+            <div class="tab-content" id="payments-tab">
+                <!-- Payments content would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="seller-testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Sellers Say</h2>
+            <div class="testimonials-carousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Since joining Agriacres, I've doubled my customer base and increased my profits by 40%. The platform is easy to use and the support team is always helpful."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/farmer1.jpg" alt="Farmer">
+                        <div class="author-info">
+                            <h4>Chido Moyo</h4>
+                            <p>Maize Farmer, Marondera</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The direct connection with buyers means I get fair prices for my tomatoes without middlemen taking most of the profit. Highly recommended for any farmer!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/farmer2.jpg" alt="Farmer">
+                        <div class="author-info">
+                            <h4>Tendai Banda</h4>
+                            <p>Vegetable Farmer, Norton</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Agriacres has transformed my small dairy operation. I now have regular customers who appreciate my fresh milk and the platform handles payments securely."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/farmer3.jpg" alt="Farmer">
+                        <div class="author-info">
+                            <h4>Farai Muzenda</h4>
+                            <p>Dairy Farmer, Gweru</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="seller-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Grow Your Farming Business?</h2>
+                <p>Join Agriacres today and start selling directly to consumers across Zimbabwe</p>
+                <a href="#seller-form" class="btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Home) -->
+    <footer class="footer">
+        <!-- Copy the same footer from index.html -->
+    </footer>
+
+    <!-- Add Product Modal -->
+    <div class="add-product-modal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select id="productCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="grains">Grains & Cereals</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="livestock">Livestock</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Description</label>
+                    <textarea id="productDescription" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productPrice">Price (USD)</label>
+                        <input type="number" id="productPrice" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productUnit">Unit</label>
+                        <select id="productUnit" required>
+                            <option value="kg">per kg</option>
+                            <option value="50kg">per 50kg bag</option>
+                            <option value="liter">per liter</option>
+                            <option value="dozen">per dozen</option>
+                            <option value="unit">per unit</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productStock">Stock Quantity</label>
+                    <input type="number" id="productStock" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productImages">Product Images</label>
+                    <div class="file-upload">
+                        <input type="file" id="productImages" accept=".jpg,.jpeg,.png" multiple required>
+                        <label for="productImages" class="file-upload-label">
+                            <i class="fas fa-upload"></i>
+                            <span>Choose Files</span>
+                        </label>
+                        <span class="file-name">No files chosen</span>
+                    </div>
+                    <small>Upload at least 3 high-quality images (max 5)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="organicCertified">
+                        This product is organically certified
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="localProduct">
+                        This is a locally produced product
+                    </label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Save Product
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/become-seller.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

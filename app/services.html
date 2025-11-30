@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Agriacres Agricultural Solutions</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Price Ticker (Same as Home) -->
+    <div class="price-ticker">
+        <div class="ticker-container">
+            <div class="ticker-title">Today's Prices:</div>
+            <div class="ticker-content" id="priceData">
+                Loading agricultural prices...
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (Same as Home) -->
+ <nav class="navbar">
+        <div class="container">
+            <img src="images/logo.svg" class="logo"> 
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item mega-dropdown">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Home Sections</h3>
+                            <a href="#hero">Hero Section</a>
+                            <a href="#clients">Our Clients</a>
+                            <a href="#marketplace">Marketplace</a>
+                            <a href="#contact">Quick Contact</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>About Agriacres</h3>
+                            <p>Learn about our mission, vision, and the team behind our agricultural innovations.</p>
+                            <a href="about.html#mission">Our Mission</a>
+                            <a href="about.html#team">Our Team</a>
+                            <a href="about.html#history">Company History</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Achievements</h3>
+                            <p>Discover our milestones and industry recognition.</p>
+                            <a href="about.html#awards">Awards</a>
+                            <a href="about.html#partners">Strategic Partners</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Our Services</h3>
+                            <p>Comprehensive agricultural solutions tailored to your needs.</p>
+                            <a href="services.html#consulting">Agricultural Consulting</a>
+                            <a href="services.html#equipment">Equipment Rental</a>
+                            <a href="services.html#training">Farmer Training</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Specialized Services</h3>
+                            <a href="services.html#irrigation">Irrigation Solutions</a>
+                            <a href="services.html#storage">Crop Storage</a>
+                            <a href="services.html#processing">Food Processing</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mega-dropdown">
+                    <a href="products.html" class="nav-link">Products</a>
+                    <div class="mega-content">
+                        <div class="mega-row">
+                            <h3>Agricultural Products</h3>
+                            <p>High-quality inputs for optimal yields.</p>
+                            <a href="products.html#seeds">Seeds & Seedlings</a>
+                            <a href="products.html#fertilizers">Fertilizers</a>
+                            <a href="products.html#pesticides">Pesticides</a>
+                        </div>
+                        <div class="mega-row">
+                            <h3>Equipment</h3>
+                            <a href="products.html#tools">Hand Tools</a>
+                            <a href="products.html#machinery">Farm Machinery</a>
+                            <a href="products.html#irrigation">Irrigation Systems</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="floating-icons">
+            <div class="icon icon-1"><i class="fas fa-tractor"></i></div>
+            <div class="icon icon-2"><i class="fas fa-tint"></i></div>
+            <div class="icon icon-3"><i class="fas fa-seedling"></i></div>
+            <div class="icon icon-4"><i class="fas fa-wind"></i></div>
+            <div class="icon icon-5"><i class="fas fa-warehouse"></i></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animated-text">Comprehensive Agricultural Services</h1>
+                <p class="subtitle">Tailored solutions to maximize your farm's productivity and profitability</p>
+                <div class="scroll-down">
+                    <span>Explore Our Services</span>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fadeIn">Our Service Categories</h2>
+                <p class="section-description">We offer end-to-end solutions covering all aspects of modern agriculture</p>
+            </div>
+            
+            <div class="service-categories">
+                <!-- Category 1 -->
+                <div class="category-card animate-slideInUp delay-1">
+                    <div class="category-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Farmer Training</h3>
+                    <p>Comprehensive programs to enhance agricultural knowledge and skills</p>
+                    <a href="#training" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="hover-effect"></div>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="category-card animate-slideInUp delay-2">
+                    <div class="category-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Irrigation Solutions</h3>
+                    <p>Efficient water management systems for all farm sizes</p>
+                    <a href="#irrigation" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="hover-effect"></div>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="category-card animate-slideInUp delay-3">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Farm Automation</h3>
+                    <p>Smart technology to optimize your operations</p>
+                    <a href="#automation" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="hover-effect"></div>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="category-card animate-slideInUp delay-4">
+                    <div class="category-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Supply Chain</h3>
+                    <p>From farm to market logistics solutions</p>
+                    <a href="#supply-chain" class="category-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="hover-effect"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="featured-services">
+        <div class="container">
+            <!-- Service 1 -->
+            <div class="service-detail" id="training">
+                <div class="service-image animate-slideInLeft">
+                    <div class="image-wrapper">
+                        <img src="images/training-service.jpg" alt="Farmer Training">
+                        <div class="image-badge">Most Popular</div>
+                    </div>
+                </div>
+                <div class="service-content animate-slideInRight">
+                    <span class="service-label">Farmer Development</span>
+                    <h2>Comprehensive Training Programs</h2>
+                    <p>Our farmer training initiatives are designed to empower agricultural producers with the latest techniques and sustainable practices. We offer:</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Seasonal workshops on crop management</li>
+                        <li><i class="fas fa-check-circle"></i> Soil health and conservation techniques</li>
+                        <li><i class="fas fa-check-circle"></i> Pest and disease management strategies</li>
+                        <li><i class="fas fa-check-circle"></i> Business skills for smallholder farmers</li>
+                        <li><i class="fas fa-check-circle"></i> Climate-smart agriculture training</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="contact.html" class="btn-primary">Schedule Training</a>
+                        <a href="#" class="btn-text">Download Brochure <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-detail alternate" id="irrigation">
+                <div class="service-content animate-slideInLeft">
+                    <span class="service-label">Water Solutions</span>
+                    <h2>Smart Irrigation Systems</h2>
+                    <p>Maximize your water efficiency with our tailored irrigation solutions designed for Zimbabwean conditions:</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Drip irrigation system design and installation</li>
+                        <li><i class="fas fa-check-circle"></i> Solar-powered irrigation solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Soil moisture monitoring technology</li>
+                        <li><i class="fas fa-check-circle"></i> Water harvesting system implementation</li>
+                        <li><i class="fas fa-check-circle"></i> Maintenance and optimization services</li>
+                    </ul>
+                    <div class="service-stats">
+                        <div class="stat">
+                            <div class="stat-value" data-count="40">0</div>
+                            <div class="stat-label">% Water Savings</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" data-count="200">0</div>
+                            <div class="stat-label">Systems Installed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image animate-slideInRight">
+                    <div class="image-wrapper">
+                        <img src="images/irrigation-service.jpg" alt="Irrigation Solutions">
+                        <div class="image-badge">Government Approved</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-detail" id="automation">
+                <div class="service-image animate-slideInLeft">
+                    <div class="image-wrapper">
+                        <img src="images/automation-service.jpg" alt="Farm Automation">
+                        <div class="image-badge">Innovation Award 2023</div>
+                    </div>
+                </div>
+                <div class="service-content animate-slideInRight">
+                    <span class="service-label">Technology</span>
+                    <h2>Farm Automation Solutions</h2>
+                    <p>Transform your farming operations with our cutting-edge automation technologies:</p>
+                    <div class="tech-features">
+                        <div class="tech-card">
+                            <i class="fas fa-thermometer-half"></i>
+                            <h4>Climate Monitoring</h4>
+                            <p>Real-time tracking of temperature, humidity, and more</p>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fas fa-tablet-alt"></i>
+                            <h4>Remote Management</h4>
+                            <p>Control systems from your mobile device</p>
+                        </div>
+                        <div class="tech-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Data Analytics</h4>
+                            <p>Actionable insights for better decision making</p>
+                        </div>
+                    </div>
+                    <div class="service-cta">
+                        <a href="contact.html" class="btn-primary">Request Demo</a>
+                        <a href="#" class="btn-text">Case Studies <i class="fas fa-file-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fadeIn">Our Service Process</h2>
+                <p class="section-description">A structured approach to ensure maximum results for your farm</p>
+            </div>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step animate-slideInUp delay-1">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Needs Assessment</h3>
+                        <p>Our experts conduct a thorough evaluation of your farm's requirements</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step animate-slideInUp delay-2">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Solution Design</h3>
+                        <p>Customized plans tailored to your specific conditions and goals</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step animate-slideInUp delay-3">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Implementation</h3>
+                        <p>Professional installation and setup by our certified technicians</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step animate-slideInUp delay-4">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Training & Support</h3>
+                        <p>Comprehensive knowledge transfer and ongoing assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="process-wave"></div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="service-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-fadeIn">What Farmers Say</h2>
+                <p class="section-description">Success stories from our agricultural community</p>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card animate-popIn delay-1">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>The irrigation system installed by Agriacres transformed my farm's productivity while reducing water usage by 35%. Their training programs are unmatched in quality.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/farmer1.jpg" alt="Tinashe M.">
+                        <div class="author-info">
+                            <h4>Tinashe M.</h4>
+                            <span>Commercial Farmer, Mashonaland East</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card animate-popIn delay-2">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>As a smallholder farmer, the training I received on climate-smart practices helped me double my yields despite the changing weather patterns. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/farmer2.jpg" alt="Memory K.">
+                        <div class="author-info">
+                            <h4>Memory K.</h4>
+                            <span>Smallholder Farmer, Manicaland</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card animate-popIn delay-3">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>The farm automation system gives me real-time data that helps me make better decisions. Agriacres' support team is always available when I have questions.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/farmer3.jpg" alt="James S.">
+                        <div class="author-info">
+                            <h4>James S.</h4>
+                            <span>Agribusiness Owner, Midlands</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content animate-fadeIn">
+                <h2>Ready to Transform Your Farm?</h2>
+                <p>Contact our agricultural specialists today to discuss customized solutions for your operation</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary animate-popIn delay-1">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                    <a href="contact.html" class="btn-secondary animate-popIn delay-2">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="cta-pattern"></div>
+    </section>
+
+    <!-- Footer (Same as Home) -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Agriacres</h3>
+                    <p>Innovating agriculture for a sustainable future in Zimbabwe and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                        <li><a href="services.html#equipment">Equipment Rental</a></li>
+                        <li><a href="services.html#training">Training</a></li>
+                        <li><a href="services.html#irrigation">Irrigation</a></li>
+                        <li><a href="services.html#storage">Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for agricultural insights and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Agriacres. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Files -->
+    <script src="js/price-api.js"></script>
+    <script src="js/services-animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
