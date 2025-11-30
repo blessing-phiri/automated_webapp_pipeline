@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Pipeline DevOps Project - Complete Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --dark: #1a202c;
+            --gray: #4a5568;
+            --light-gray: #e2e8f0;
+            --white: #ffffff;
+            --success: #48bb78;
+            --warning: #ed8936;
+            --danger: #f56565;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .tech-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem 4rem;
+        }
+
+        /* Section Styling */
+        .section {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section h3 {
+            color: var(--secondary);
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Architecture Diagram */
+        .architecture {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .architecture-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .flow-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 150px;
+            font-weight: 600;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            position: relative;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Image Placeholder & Container */
+        .image-placeholder {
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+            border: 3px dashed var(--gray);
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::before {
+            content: "📷";
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .image-placeholder p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            font-weight: 600;
+        }
+
+        .image-placeholder small {
+            color: var(--gray);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /* Image Container - For actual images */
+        .image-container {
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border: 2px solid var(--light-gray);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            background: #f7fafc;
+            padding: 1rem;
+            text-align: center;
+            color: var(--gray);
+            font-weight: 600;
+            border-top: 2px solid var(--light-gray);
+        }
+
+        /* Image Grid for multiple screenshots */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .image-grid .image-container {
+            margin: 0;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Step Cards */
+        .step-card {
+            background: #f7fafc;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            line-height: 1.8;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f7fafc;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .alert-info {
+            background: #bee3f8;
+            border-left: 4px solid #3182ce;
+            color: #2c5282;
+        }
+
+        .alert-warning {
+            background: #feebc8;
+            border-left: 4px solid #dd6b20;
+            color: #7c2d12;
+        }
+
+        .alert-success {
+            background: #c6f6d5;
+            border-left: 4px solid #38a169;
+            color: #22543d;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(26, 32, 44, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .architecture-flow {
+                flex-direction: column;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .mobile-menu, .btn-group {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                🚀 Automated Pipeline DevOps Project
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#setup">Setup</a></li>
+                <li><a href="#implementation">Implementation</a></li>
+                <li><a href="#cicd">CI/CD</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>🎯 Automated Pipeline DevOps Project</h1>
+        <p>Complete Infrastructure Automation with Terraform, Ansible & CI/CD on AWS</p>
+        <div class="tech-badges">
+            <span class="badge">☁️ AWS</span>
+            <span class="badge">🏗️ Terraform</span>
+            <span class="badge">⚙️ Ansible</span>
+            <span class="badge">🔄 GitHub Actions</span>
+            <span class="badge">🐧 Bash</span>
+            <span class="badge">🌐 Nginx</span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Project Overview -->
+        <section class="section" id="overview">
+            <h2>📋 Project Overview</h2>
+            <p>This project demonstrates a complete DevOps workflow, showcasing Infrastructure as Code (IaC), Configuration Management, and Continuous Integration/Continuous Deployment (CI/CD) practices on AWS Free Tier.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🎯 Objective</h4>
+                    <p>Build an automated deployment pipeline that provisions cloud infrastructure and deploys applications with zero manual intervention.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>💡 Key Features</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✓ Modular Infrastructure Code</li>
+                        <li>✓ Automated Configuration</li>
+                        <li>✓ Complete CI/CD Pipeline</li>
+                        <li>✓ Security Best Practices</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>🎓 Learning Goals</h4>
+                    <p>Master IaC principles, automation scripting, cloud infrastructure management, and modern DevOps practices.</p>
+                </div>
+            </div>
+
+            <h3>🛠️ Technologies Used</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Infrastructure as Code</td>
+                        <td>Terraform</td>
+                        <td>Provision AWS resources (VPC, EC2, Security Groups)</td>
+                    </tr>
+                    <tr>
+                        <td>Configuration Management</td>
+                        <td>Ansible</td>
+                        <td>Configure servers and deploy applications</td>
+                    </tr>
+                    <tr>
+                        <td>CI/CD</td>
+                        <td>GitHub Actions</td>
+                        <td>Automate testing, building, and deployment</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Provider</td>
+                        <td>AWS Free Tier</td>
+                        <td>Host infrastructure (EC2, VPC, IAM)</td>
+                    </tr>
+                    <tr>
+                        <td>Scripting</td>
+                        <td>Bash</td>
+                        <td>Automation and orchestration scripts</td>
+                    </tr>
+                    <tr>
+                        <td>Web Server</td>
+                        <td>Nginx</td>
+                        <td>Serve web application</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Architecture -->
+        <section class="section" id="architecture">
+            <h2>🏗️ System Architecture</h2>
+            
+            <div class="architecture">
+                <h3 style="color: var(--dark); margin-top: 0;">Deployment Pipeline Flow</h3>
+                <div class="architecture-flow">
+                    <div class="flow-item">📝 GitHub Repository</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">🔄 GitHub Actions</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">🏗️ Terraform</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">☁️ AWS Infrastructure</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">⚙️ Ansible</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">🌐 Deployed App</div>
+                </div>
+            </div>
+
+            <!-- REPLACE THIS WITH YOUR IMAGE -->
+            <div class="image-container">
+                <img src="images/architecture-diagram.png" alt="Architecture Diagram">
+                <div class="image-caption">Complete system architecture showing VPC, subnets, EC2, and security groups</div>
+            </div>
+            <!-- OR KEEP PLACEHOLDER IF YOU DON'T HAVE THIS IMAGE YET -->
+            <!-- <div class="image-placeholder">
+                <p>Architecture Diagram</p>
+                <small>Insert screenshot: Complete system architecture showing VPC, subnets, EC2, and security groups</small>
+            </div> -->
+
+            <h3>🌐 Infrastructure Components</h3>
+            
+            <div class="step-card">
+                <h4><span class="step-number">1</span>Network Layer</h4>
+                <ul>
+                    <li><strong>VPC:</strong> 10.0.0.0/16 - Isolated network environment</li>
+                    <li><strong>Public Subnet:</strong> 10.0.1.0/24 - Hosts web servers</li>
+                    <li><strong>Internet Gateway:</strong> Enables public internet access</li>
+                    <li><strong>Route Tables:</strong> Routes traffic appropriately</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4><span class="step-number">2</span>Compute Layer</h4>
+                <ul>
+                    <li><strong>EC2 Instance:</strong> t3.micro (Free Tier eligible)</li>
+                    <li><strong>AMI:</strong> Rhel 9</li>
+                    <li><strong>Storage:</strong> 12GB gp2 EBS volume</li>
+                    <li><strong>Auto-assigned Public IP:</strong> For external access</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4><span class="step-number">3</span>Security Layer</h4>
+                <ul>
+                    <li><strong>Security Group Rules:</strong>
+                        <ul>
+                            <li>Port 22 (SSH) - Administrative access</li>
+                            <li>Port 80 (HTTP) - Web traffic</li>
+                            <li>Port 443 (HTTPS) - Secure web traffic</li>
+                        </ul>
+                    </li>
+                    <li><strong>IAM Roles:</strong> Least privilege access</li>
+                    <li><strong>SSH Key Pairs:</strong> Secure authentication</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Setup & Prerequisites -->
+        <section class="section" id="setup">
+            <h2>⚙️ Environment Setup</h2>
+
+            <h3>📦 Prerequisites</h3>
+            <div class="step-card">
+                <h4>Required Accounts & Tools</h4>
+                <ul>
+                    <li>AWS Account (Free Tier)</li>
+                    <li>GitHub Account</li>
+                    <li>Terraform >= 1.6.0</li>
+                    <li>Ansible >= 2.15.0</li>
+                    <li>AWS CLI v2</li>
+                    <li>Git</li>
+                    <li>SSH client</li>
+                </ul>
+            </div>
+
+            <h3>🔐 AWS Configuration</h3>
+            
+            <!-- REPLACE THIS WITH YOUR IMAGE -->
+            <div class="image-container">
+                <img src="iamuser.jpeg" alt="AWS IAM User Creation">
+                <div class="image-caption">Creating IAM user with programmatic access in AWS Console</div>
+            </div>
+            <!-- OR KEEP PLACEHOLDER -->
+            <!-- <div class="image-placeholder">
+                <p>AWS IAM User Creation</p>
+                <small>Insert screenshot: Creating IAM user with programmatic access in AWS Console</small>
+            </div> -->
+
+            <div class="code-block" data-lang="bash">
+# Configure AWS CLI with credentials
+aws configure
+# AWS Access Key ID: [your-access-key]
+# AWS Secret Access Key: [your-secret-key]  
+# Default region: us-east-1
+# Default output format: json
+
+# Verify configuration
+aws sts get-caller-identity
+            </div>
+
+            <!-- REPLACE THIS WITH YOUR IMAGE -->
+            <div class="image-container">
+                <img src="accesskey.jpeg" alt="EC2 Key Pair Creation">
+                <div class="image-caption">Creating EC2 key pair in AWS Console</div>
+            </div>
+
+            <div class="alert alert-warning">
+                <strong>⚠️ Important:</strong> Download and securely store your EC2 private key (.pem file). Set proper permissions: <code>chmod 600 devops-project-key.pem</code>
+            </div>
+
+            <h3>📁 Project Structure</h3>
+            <div class="code-block" data-lang="text">
+devops-resume-project/
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml           # CI/CD deployment pipeline
+│       └── destroy.yml          # Infrastructure teardown
+├── terraform/
+│   ├── modules/
+│   │   ├── network/            # VPC, subnets, routing
+│   │   │   ├── main.tf
+│   │   │   ├── variables.tf
+│   │   │   └── outputs.tf
+│   │   └── compute/            # EC2, security groups
+│   │       ├── main.tf
+│   │       ├── variables.tf
+│   │       └── outputs.tf
+│   └── environments/
+│       └── dev/
+│           ├── main.tf
+│           ├── variables.tf
+│           └── outputs.tf
+├── ansible/
+│   ├── playbooks/
+│   │   └── deploy_webapp.yml
+│   ├── templates/
+│   │   └── nginx.conf.j2
+│   ├── inventory/
+│   │   └── hosts
+│   └── ansible.cfg
+├── app/
+│   └── index.html              # Web application
+├── scripts/
+│   ├── deploy.sh               # Automated deployment
+│   └── destroy.sh              # Cleanup script
+├── .gitignore
+└── README.md
+            </div>
+        </section>
+
+        <!-- Implementation -->
+        <section class="section" id="implementation">
+            <h2>🔨 Implementation Details</h2>
+
+            <h3>1️⃣ Terraform Infrastructure Code</h3>
+            <p>Modular Terraform configuration for provisioning AWS resources.</p>
+
+            <div class="step-card">
+                <h4>Network Module (VPC & Networking)</h4>
+                <div class="code-block" data-lang="hcl">
+# terraform/modules/network/main.tf
+resource "aws_vpc" "main" {
+  cidr_block           = var.vpc_cidr
+  enable_dns_hostnames = true
+  enable_dns_support   = true
+  
+  tags = {
+    Name        = "${var.project_name}-${var.environment}-vpc"
+    Environment = var.environment
+  }
+}
+
+resource "aws_internet_gateway" "main" {
+  vpc_id = aws_vpc.main.id
+  
+  tags = {
+    Name = "${var.project_name}-${var.environment}-igw"
+  }
+}
+
+resource "aws_subnet" "public" {
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = var.public_subnet_cidr
+  map_public_ip_on_launch = true
+  
+  tags = {
+    Name = "${var.project_name}-${var.environment}-public-subnet"
+  }
+}
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="terraform plan!.png" alt="EC2 Key Pair Creation">
+                <div class="image-caption">Terraform Init, Terraform Plan and Terraform Apply</div>
+            </div>
+
+            <div class="step-card">
+                <h4>Compute Module (EC2 & Security)</h4>
+                <div class="code-block" data-lang="hcl">
+# terraform/modules/compute/main.tf
+resource "aws_security_group" "web_sg" {
+  name        = "${var.project_name}-${var.environment}-web-sg"
+  vpc_id      = var.vpc_id
+  
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  
+  ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+resource "aws_instance" "web_server" {
+  ami                    = data.aws_ami.amazon_linux_2.id
+  instance_type          = var.instance_type
+  key_name              = var.key_name
+  subnet_id             = var.public_subnet_id
+  vpc_security_group_ids = [aws_security_group.web_sg.id]
+  
+  tags = {
+    Name        = "${var.project_name}-${var.environment}-web-server"
+    Environment = var.environment
+  }
+}
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="terraform win!.png" alt="EC2 Key Pair Creation">
+                <div class="image-caption">Terraform Apply success</div>
+            </div>
+
+            <div class="alert alert-success">
+                <strong>✅ Result:</strong> Infrastructure successfully provisioned with VPC, subnet, Internet Gateway, EC2 instance, and security groups all configured via code.
+            </div>
+
+            <h3>2️⃣ Ansible Configuration Management</h3>
+            <p>Automated server configuration and application deployment.</p>
+
+            <div class="step-card">
+                <h4>Main Playbook</h4>
+                <div class="code-block" data-lang="yaml">
+# ansible/playbooks/deploy_webapp.yml
+---
+- name: Deploy Web Application
+  hosts: webservers
+  become: yes
+  
+  tasks:
+    - name: Update all packages
+      yum:
+        name: '*'
+        state: latest
+        update_cache: yes
+    
+    - name: Install required packages
+      yum:
+        name:
+          - git
+          - nginx
+          - python3
+        state: present
+    
+    - name: Copy application files
+      copy:
+        src: ../../app/
+        dest: "/opt/devops-resume-app/"
+        owner: webapp
+        group: webapp
+    
+    - name: Configure Nginx
+      template:
+        src: ../templates/nginx.conf.j2
+        dest: /etc/nginx/conf.d/webapp.conf
+      notify: Restart nginx
+    
+    - name: Ensure Nginx is started
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+  
+  handlers:
+    - name: Restart nginx
+      systemd:
+        name: nginx
+        state: restarted
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="ping pong.png" alt="Ansible">
+                <div class="image-caption">Ansible Configuration</div>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>💡 Note:</strong> Ansible ensures idempotency - running the playbook multiple times produces the same result without duplicating efforts.
+            </div>
+
+            <h3>3️⃣ Bash Automation Scripts</h3>
+            <p>Orchestration scripts for complete deployment automation.</p>
+
+            <div class="code-block" data-lang="bash">
+#!/bin/bash
+# scripts/deploy.sh
+
+set -e
+
+print_status() {
+    echo -e "\033[0;32m[INFO]\033[0m $1"
+}
+
+# Check requirements
+check_requirements() {
+    print_status "Checking requirements..."
+    command -v terraform >/dev/null 2>&1 || { echo "Terraform not found"; exit 1; }
+    command -v ansible >/dev/null 2>&1 || { echo "Ansible not found"; exit 1; }
+}
+
+# Deploy infrastructure
+deploy_infrastructure() {
+    print_status "Deploying infrastructure with Terraform..."
+    cd terraform/environments/dev
+    terraform init
+    terraform apply -auto-approve
+    cd ../../..
+}
+
+# Get EC2 IP and deploy application
+deploy_application() 
+
+            <div class="image-container">
+                <img src="Win.png" alt="EC2 Key Pair Creation">
+                <div class="image-caption">Bash Script Success</div>
+            </div>
+
+            <div class="alert alert-success">
+                <strong>✅ Result:</strong> Infrastructure successfully provisioned with VPC, subnet, Internet Gateway, EC2 instance, and security groups all configured via code.
+            </div>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+  const spans = document.querySelectorAll('.mobile-menu span');
+  spans.forEach((s, i) => s.style.transform = navLinks.classList.contains('active') ? `rotate(${i===1?45: i===2? -45: 0}deg) translateY(${i===1?6: i===2?-6:0}px)` : '');
+}
+</script>
+</div>
+</section>
+</div>
+</body>
+</html>
