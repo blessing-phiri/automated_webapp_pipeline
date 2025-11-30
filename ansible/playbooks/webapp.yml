@@ -15,10 +15,9 @@
         update_cache: yes
 
     - name: Install required packages
-      yum:
+      ansible.builtin.yum:
         name:
           - git
-          - nginx
           - python3
           - python3-pip
         state: present
@@ -47,7 +46,7 @@
         group: "{{ app_user }}"
         mode: '0644'
 
-    - name: Configure Nginx
+    - name: Configure nginx
       template:
         src: ../templates/nginx.conf.j2
         dest: /etc/nginx/conf.d/webapp.conf
@@ -56,20 +55,20 @@
         mode: '0644'
       notify: Restart nginx
 
-    - name: Remove default Nginx configuration
+    - name: Remove default nginx configuration
       file:
         path: /etc/nginx/conf.d/default.conf
         state: absent
       notify: Restart nginx
 
-    - name: Ensure Nginx is started and enabled
+    - name: Ensure nginx is started and enabled
       systemd:
         name: nginx
         state: started
         enabled: yes
 
     - name: Open firewall for HTTP
-      firewalld:
+      ansible.posix.firewalld:
         service: http
         permanent: yes
         state: enabled

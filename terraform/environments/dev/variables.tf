@@ -19,13 +19,13 @@ variable "public_subnet_cidr" {
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t2.micro"  # Free tier eligible
+  default     = "t3.micro"  # Free tier eligible
 }
 
 variable "key_name" {
   description = "EC2 key pair name"
   type        = string
-  default     = "devops-project-key"
+  default     = "automated-web-pipeline"
 }
 
 variable "project_name" {
