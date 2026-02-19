@@ -1,6 +1,6 @@
 # Zero-Touch AWS Deployment Pipeline
 
-> Fully automated provisioning and deployment of a production-grade web application on AWS — from a single `git push` to a live, configured server in under 10 minutes, with zero manual intervention.
+> Fully automated provisioning and deployment of a production-grade web application on AWS from a single `git push` to a live, configured server in under 10 minutes, with zero manual intervention.
 
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/features/actions)
 [![IaC](https://img.shields.io/badge/IaC-Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)](https://www.terraform.io/)
@@ -12,7 +12,7 @@
 
 ## 📌 Problem Statement
 
-Manual infrastructure provisioning is slow, error-prone, and impossible to scale. Every new environment — dev, staging, prod — requires repeating the same steps, introducing inconsistency and human error.
+Manual infrastructure provisioning is slow, error-prone, and impossible to scale. Every new environment dev, staging, prod requires repeating the same steps, introducing inconsistency and human error.
 
 This project solves that by combining **Infrastructure as Code**, **Configuration Management**, and **CI/CD automation** into a single, repeatable pipeline that provisions identical environments on demand, every time.
 
